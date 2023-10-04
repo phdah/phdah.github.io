@@ -17,12 +17,12 @@ help:
 .PHONY: help Makefile
 
 gen-module:
-	@sphinx-apidoc -o ./docs ./pipelines/lib/pipelines
+	@sphinx-apidoc -o ./modules ./pipelines/lib/pipelines
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
-	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O) && cp -r ./$(BUILDDIR)/html ./docs
 
 port-forward:
 	@python3 -m http.server 8080 --directory ./$(BUILDDIR)/html

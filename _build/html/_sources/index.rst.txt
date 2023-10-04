@@ -9,4 +9,4 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   docs/modules
+   modules/modules
