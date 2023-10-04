@@ -15,7 +15,7 @@ now = datetime.datetime.now()
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Databricks'
-copyright = str(str(now.year) + ', SBAB DS & Transformers')
+copyright = str(str(now.year) + ', Team Michelin')
 author = 'Team Michelin'
 release = '0.0.1'
 
