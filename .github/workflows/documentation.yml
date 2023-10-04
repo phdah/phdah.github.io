@@ -14,6 +14,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+      - name: Build Sphinx docks
+        run: |
+          make gen-module && make html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
