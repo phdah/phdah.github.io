@@ -1,0 +1,6 @@
+# Packages to create docs
+sphinx
+sphinx_rtd_theme
+
+# Module libraries
+pyspark
